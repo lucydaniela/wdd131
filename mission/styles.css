@@ -1,0 +1,45 @@
+body {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #707d85;
+    padding: 80px; 
+}
+
+.title {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.title h2 {
+    color: #006EB6;
+}
+
+.main {
+    text-align: left;
+}
+
+.main p {
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.does-list {
+    list-style: none; 
+    padding-left: 0; }
