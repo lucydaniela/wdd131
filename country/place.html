@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal</title>
+    <link rel="stylesheet" href="place.css">
+    <script src="place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Nepal</h1>
+    </header>
+    <div class="sub-bar">
+    </div>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="countryimags/mountain.jpg" media="(max-width: 768px)">
+                <source srcset="countryimags/mountain.jpg" media="(min-width: 769px) and (max-width: 1024px)">
+                <source srcset="countryimags/stupa.jpg" media="(min-width: 1025px)">
+                <img src="countryimags/stupa.jpg" alt="Stupa in Nepal" class="hero-image">
+            </picture>
+            <div class="floating-box data-box">
+                <div class="data-banner">
+                    <h2>Data</h2> 
+                </div>
+                <ul>
+                    <li><strong>Area:</strong> 56,827 sq mi</li>
+                    <li><strong>Population:</strong> 29,637,811</li>
+                    <li><strong>Capital:</strong> Kathmandu </li>
+                    <li><strong>Languages:</strong> Napali, Maithili</li>
+                    <li><strong>Currency:</strong> Napalese Rupee</li>
+                    <li><strong>Time Zone:</strong> GMT+5:45</li>
+                    <li><strong>Calling Code:</strong> +977</li>
+                    <li><strong>Internet TLD:</strong> .np</li>
+                </ul>
+            </div>
+            <div class="floating-box weather-box">
+                <div class="weather-banner">
+                    <h2>Weather <span class="weather-icon">⛅</span></h2>
+                </div>
+                <ul>
+                    <li><strong>Temperature:</strong> 10°C</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> 5 km/h</li>
+                    <li><strong>Wind Chill:</strong> 9.8°C</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lucy Larsen &bull; Nepal </p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
