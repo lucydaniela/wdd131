@@ -1,0 +1,140 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #a41d21;
+    --secondary-color: #f3f3f3;
+    --text-color: #333;
+    --banner-color: #388e3c;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 2rem;
+}
+
+/* Hero Section */
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* Floating Boxes for Data and Weather */
+.floating-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+    width: 250px;
+}
+
+/* Data Box Styles */
+.data-box {
+    top: 20%;
+    left: 5%;
+    width: 300px;
+}
+
+/* Data Banner */
+.data-banner {
+    background-color: var(--banner-color);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+}
+
+/* Weather Box Styles */
+.weather-box {
+    top: 50%;
+    right: 5%;
+    width: 400px;
+}
+
+/* Weather Banner */
+.weather-banner {
+    background-color: var(--banner-color);
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .floating-box {
+        position: static;
+        margin: 1rem auto;
+        width: auto;
+    }
+
+    .hero img {
+        max-height: none;
+        width: 100%;
+    }
+
+    footer {
+        padding: 1.5rem 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+/* Sub-bar Styles */
+.sub-bar {
+    background-color: #1e1a7a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #1e1a7a;
+}
+
+/* Image Bar */
+.image-bar {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Image */
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Additional Mobile Styling */
+@media (max-width: 768px) {
+    .responsive-image {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}

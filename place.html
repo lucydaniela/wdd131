@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nepal</title>
-    <link rel="stylesheet" href="place.css">
-    <script src="place.js" defer></script>
+    <title>Nepal - Learning Activity</title>
+
+    <!-- Google Font with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS (place inside a 'styles' directory) -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- External JavaScript (place inside a 'scripts' directory) -->
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Nepal</h1>
     </header>
     <div class="sub-bar">
+        <!-- Additional content can go here if needed -->
     </div>
     <main>
         <section class="hero">
             <picture>
-                <source srcset="countryimags/mountain.jpg" media="(max-width: 768px)">
-                <source srcset="countryimags/mountain.jpg" media="(min-width: 769px) and (max-width: 1024px)">
-                <source srcset="countryimags/stupa.jpg" media="(min-width: 1025px)">
-                <img src="countryimags/stupa.jpg" alt="Stupa in Nepal" class="hero-image">
+                <source srcset="countryimgs/mountain.jpg" media="(max-width: 768px)">
+                <source srcset="countryimgs/mountain.jpg" media="(min-width: 769px) and (max-width: 1024px)">
+                <source srcset="countryimgs/stupa.jpg" media="(min-width: 1025px)">
+                <img src="countryimgs/stupa.jpg" alt="Stupa in Nepal" class="hero-image">
             </picture>
             <div class="floating-box data-box">
                 <div class="data-banner">
@@ -29,8 +39,8 @@
                     <li><strong>Area:</strong> 56,827 sq mi</li>
                     <li><strong>Population:</strong> 29,637,811</li>
                     <li><strong>Capital:</strong> Kathmandu </li>
-                    <li><strong>Languages:</strong> Napali, Maithili</li>
-                    <li><strong>Currency:</strong> Napalese Rupee</li>
+                    <li><strong>Languages:</strong> Nepali, Maithili</li>
+                    <li><strong>Currency:</strong> Nepalese Rupee</li>
                     <li><strong>Time Zone:</strong> GMT+5:45</li>
                     <li><strong>Calling Code:</strong> +977</li>
                     <li><strong>Internet TLD:</strong> .np</li>
@@ -50,8 +60,13 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Lucy Larsen &bull; Nepal </p>
+        <p>&copy; 2024 Lucy Larsen &bull; Nepal</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
+
+    <!-- Add the last modified date script here -->
+    <script>
+        document.getElementById("last-modified").textContent = "Last modified: " + document.lastModified;
+    </script>
 </body>
 </html>
