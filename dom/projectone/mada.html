@@ -1,14 +1,12 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course Home Page">    
+    <meta name="description" content="WDD131 -  Dynamic Web Fundamentals - Lucy Larsen">    
     <meta name="author" content="Gloria M. Francesco">
-    <title>Course Home Page</title>
-    <link rel="stylesheet" href="mada.css">
+    <title>WDD 131 - Dynamaic Web Fundamentals - Lucy Larsen </title>
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -19,55 +17,43 @@ HTML
 </head>
 <body>
     <header>
-        <img src="images/cousins.jpg" alt="Gloria M. Francesco">
-        <h1>Gloria M. Francesco</h1>
+        <h1> WDD131 Dynamic Web Fundamentals - Lucy Larsen</h1>
     </header>
 
     <nav>
         <ul id="navList">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="https://yourgithubusername.github.io/wdd231/chamber">Chamber</a></li>
-            <li><a href="https://github.com/yourgithubusername">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/yourlinkedinprofile">LinkedIn</a></li>
+            <li><a href="index.html" class="active">LinkedIn</a></li>
+            <li><a href="https://yourgithubusername.github.io/wdd231/chamber">I-Learn</a></li>
+            <li><a href="https://github.com/yourgithubusername">Scripture</a></li>
+            <li><a href="https://www.linkedin.com/in/yourlinkedinprofile">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="content-section">
-            <h2>Course Work</h2>
-            <ul>
-                <li>Course 1</li>
-                <li>Course 2</li>
-                <li>Course 3</li>
-            </ul>
-        </section>
-        
-        <section class="content-section">
-            <h2>Toloria, Madagascar</h2>
-            <img src="images/madatree.png" alt="Baobab Trees">
-            <p>Baobab Trees</p>
-        </section>
-        
-        <section class="content-section full-width">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div id="courseFilters">
-                <button id="showAll" class="filter-button">All</button>
-                <button id="showCSE" class="filter-button">CSE</button>
-                <button id="showWDD" class="filter-button">WDD</button>
+        <section class="content-section" id="aboutMe">
+            <div class="mini-header">About Me</div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>My name is Lucy Larsen, I am from Saratoga Springs, UT but currently live in Rexburg, Idaho.</p>
+                    <p>I love the outdoors, winter, and Mexican food. My husband and I are expecting our first baby (boy!) in March. We are moving to Utah at the end of the semester for an internship and BYU Law School.</p>
+                </div>
+                <img src="images/lucyheadshot.jpg" alt="lucy larsen headshot">
             </div>
-            <div id="coursesContainer"></div>
-            <button id="showAll" class="filter-button">WDD131</button>
-                <button id="showCSE" class="filter-button">WDD231</button>
-                <button id="showWDD" class="filter-button">WDD</button>
-                <button id="showAll" class="filter-button">CSE210</button>
-                <button id="showCSE" class="filter-button">CSE</button>
-                <button id="showWDD" class="filter-button">TEST</button>
-        </section><button type="button">Click Me!</button>
+        </section>
+        
+        <section class="content-section">
+            <div class="mini-header">Web Dev Resources</div>
+            <img src="images/madatree.png" alt="Baobab Trees">
+            <p>LinkedIn</p>
+        </section>
+        
+        
+        
 
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Rubia Magdalena Francesco <span>&#x1F33C;</span> Madagascar</p>
+        <p>&copy; <span id="currentYear"></span> WDD 131 Dynamiv Web Fundamentals - Lucy Larsen <span>&#x1F33C;</span> Madagascar</p>
         <p id="lastModified"></p>
     </footer>
 </body>

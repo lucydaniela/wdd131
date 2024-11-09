@@ -1,0 +1,138 @@
+/* General styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #0d392b;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #000;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    flex: 1;
+    padding: 2rem;
+}
+
+.mini-header {
+    background-color: #0d392b; /* Choose a color for the header bar */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 5px; /* Matches the rounded corners of the box */
+    border-top-right-radius: 5px;
+    margin-bottom: 1rem; /* Space between the header and the content */
+}
+
+/* Ensure .content-section expands to fit all content */
+.content-section {
+    background-color: #ecf0f1;
+    border-radius: 0px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+/* Layout for the about-content */
+#aboutMe .about-content {
+    display: flex;
+    gap: .5rem; /* Space between text and image */
+    align-items: center; /* Vertically center the content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    gap: 1rem; /* Space between image and text */
+    padding: 4rem 0;
+}
+
+/* Set width for the text */
+#aboutMe .about-text {
+    flex: 1; /* Allows the text to take remaining space */
+    display: block;
+    text-align: center;
+    font-size: larger;
+}
+
+/* Fixed width for the image */
+#aboutMe .about-content img {
+    width: 150px;
+    height: auto;
+    border-radius: 0px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #0d392b;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    background-color: #0d392b;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav.active ul {
+        display: block;
+    }
+
+    nav.active ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+}
+
