@@ -1,24 +1,23 @@
-function adjustGalleryLayout() {
+// JavaScript fallback to dynamically adjust the gallery layout
+function updateGalleryLayout() {
     const gallery = document.querySelector('.gallery');
-    if (!gallery) return; // Check if gallery exists
 
-    const screenWidth = window.innerWidth;
-
-    // Adjust grid columns based on screen width
-    if (screenWidth < 480) {
-        gallery.style.gridTemplateColumns = '1fr'; // Single column for small screens
-    } else if (screenWidth < 768) {
-        gallery.style.gridTemplateColumns = 'repeat(2, 1fr)'; // Two columns for medium screens
+    if (window.innerWidth >= 768) {
+        gallery.style.display = 'grid';
+        gallery.style.gridTemplateColumns = 'repeat(3, 1fr)';
     } else {
-        gallery.style.gridTemplateColumns = 'repeat(3, 1fr)'; // Three columns for large screens
+        gallery.style.display = 'grid';
+        gallery.style.gridTemplateColumns = '1fr';
     }
 }
 
-window.addEventListener('load', adjustGalleryLayout);
-window.addEventListener('resize', adjustGalleryLayout);
+// Initial layout setup and listen for resize events
+updateGalleryLayout();
+window.addEventListener('resize', updateGalleryLayout);
 
+// Function to toggle the menu visibility
 function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('show'); // Toggle the 'show' class to show/hide the menu
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('open');
 }
 

@@ -48,14 +48,17 @@ body {
 
 .gallery {
   display: grid;
-  grid-gap: 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
   justify-items: center; /* Center the items horizontally */
   margin: 20px;
 }
 
 .gallery figure {
   margin: 0;
-  text-align: center; /* Center the text under the images */
+  text-align: center; 
+
 }
 
 .gallery img {
@@ -64,9 +67,20 @@ body {
   height: auto;
   object-fit: cover;
   display: block;
+  border-radius: 0px;
+}
+
+.gallery figcaption {
+  font-size: 0.9em;
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for screens 768px and wider */
+    }
+
   .menu {
     display: none;
     flex-direction: column;
@@ -112,5 +126,9 @@ body {
 .topnav, .site-footer {
   width: 100%; 
   box-sizing: border-box; 
+}
+
+.menu.open {
+  display: flex;
 }
 
