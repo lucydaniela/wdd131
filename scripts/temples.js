@@ -20,4 +20,15 @@ function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('open');
 }
+// Dynamically set the copyright year
+const currentYear = new Date().getFullYear();
+document.getElementById('currentYear').textContent = currentYear;
+
+// Dynamically set the last modified date
+const lastModified = new Date(document.lastModified);
+document.getElementById('lastModified').textContent = lastModified.toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
 
