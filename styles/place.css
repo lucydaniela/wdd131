@@ -63,7 +63,7 @@ html, body {
 /* Data Box Styles */
 .data-box {
     position: absolute;
-    top: 30%; /* Move it down from its original position */
+    top: 30%; 
     left: 5%;
     width: 300px;
     background-color: rgba(255, 255, 255, 0.9);
