@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Gallery</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <h1>Temple Gallery</h1>
+        <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu" id="menu">
+            <a href="#home">Home</a>
+            <a href="#people">People</a>
+            <a href="#places">Places</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <div class="gallery" id="templesContainer">
+
+        <h2>Home</h2>
+        <section class="gallery">
+            <ul>
+                <li><a href="#" id="filterHome">Home</a></li>
+                <li><a href="#" id="filterOld">Old</a></li>
+                <li><a href="#" id="filterNew">New</a></li>
+                <li><a href="#" id="filterLarge">Large</a></li>
+                <li><a href="#" id="filterSmall">Small</a></li>
+            </ul>
+        
+            <div id="templesContainer"></div>
+        </section>
+    </main>
+    
+
+    <footer class="site-footer">
+        <h1>© <span id="currentYear"></span> Lucy Larsen 🌸 Temple Gallery.</h1>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <script src="filtered-temples.js"></script>
+    </footer>
+</body>
+</html>

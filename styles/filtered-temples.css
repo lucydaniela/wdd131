@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .topnav {
+    background-color: #3072a2;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .topnav h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .menu-toggle {
+    display:none;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+     cursor: pointer;
+  }
+  
+  .menu a {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px 25px;
+    text-decoration: none;
+    background-color: #3072a2;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+  
+  .menu a:hover {
+    background-color: #555; 
+    color: #f0f0f0; 
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+    justify-items: center; /* Center the items horizontally */
+    margin: 20px;
+  }
+  
+  .gallery figure {
+    margin: 0;
+    text-align: center; 
+  
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0px;
+  }
+  
+  .gallery figcaption {
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+  
+  @media (max-width: 768px) {
+  
+      .gallery {
+          grid-template-columns: repeat(3, 1fr); /* 3 columns for screens 768px and wider */
+      }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background-color: #3072a2;
+      padding: 10px 0;
+    }
+  
+    .menu-toggle {
+      display: block; 
+    }
+  
+    .menu.show {
+      display: flex; 
+    }
+  }
+  
+  .site-footer {
+    background-color: #3072a2;
+    color: white;
+    padding: 35px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  
+  .site-footer p {
+    margin: 0;
+    font-size: 20px; 
+  }
+  
+  body {
+    margin: 0; 
+    padding: 0;
+  }
+  
+  .topnav, .site-footer {
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  .menu.open {
+    display: flex;
+  }
+  
+  /* Path: filtered-temples.css */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.temple-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.temple-image {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.temple-card h2 {
+    margin: 0.5rem 0;
+}
+
+.temples-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.temple-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.temple-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.temple-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.3rem 0;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+/* CSS for Gallery Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default for small screens */
+    gap: 20px; /* Space between cards */
+    margin: 20px auto;
+    max-width: 1200px; /* Optional: Limit the gallery width */
+    padding: 0 10px;
+}
+
+.temple-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.temple-card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Media query for medium screens */
+@media (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Default for small screens */
+        gap: 20px; /* Space between cards */
+        margin: 20px auto;
+        max-width: 1200px; /* Optional: Limit the gallery width */
+        padding: 0 10px;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+    }
+}
