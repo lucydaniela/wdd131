@@ -1,0 +1,110 @@
+/* General Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif; /* Default font */
+}
+
+/* Default Body Styling */
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400; /* Regular weight */
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Merriweather for Bolded Text */
+strong {
+    font-family: "Merriweather", serif;
+    font-weight: 700; /* Use bold Merriweather */
+}
+
+header {
+    background-color: #274472;
+    color: white;
+    text-align: center;
+    padding: 45px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left:0;
+
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(39, 68, 114, 0.1);
+    padding: 20px;
+}
+
+/* Section Styling */
+section#site-name h2,
+section#color-schema h2,
+section.gallery h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 700; 
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#site-name {
+    font-size: 1.5rem; /* Increases all text size by 150% (1rem = 16px by default) */
+    line-height: 2; /* Improves readability by adjusting line spacing */
+}
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #eee;
+    color: #274472;
+    border-top: 1px solid #ddd;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%; /* Ensures the image scales down responsively */
+    height: auto; /* Maintains the aspect ratio */
+    border: 1px solid #ddd;
+    border-radius: 0px; /* Optional: Rounds the corners slightly */
+}
+
+#color-schema {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.color-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-swatch {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Slight rounding for better visuals */
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

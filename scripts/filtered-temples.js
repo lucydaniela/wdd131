@@ -43,7 +43,7 @@ if (lastModifiedElement) {
     });
 }
 
-// Array of temples (example data)
+document.addEventListener("DOMContentLoaded", () => {
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -77,7 +77,7 @@ const temples = [
         templeName: "Provo City Center",
         location: "Provo, Utah",
         dedicated: "2016, March, 20",
-        area: 0000 ,
+        area: 0 ,
         imageUrl: "images/provo-city-center-templen.jpg"
     },
     {
@@ -93,8 +93,89 @@ const temples = [
         dedicated: "2001, March, 18",
         area:  41000,
         imageUrl: "./images/uruguay-temple.jpg"
-    }
+    },
+    {
+        templeName: "Saratoga Springs",
+        location:  "Saratoga Springs, Utah",
+        dedicated: "2023, August, 13",
+        area:  97836,
+        imageUrl: "./images/saratoga-springs.jpg"
+    },
+    {
+        templeName: "Salt Lake Temple",
+        location:  "Salt Lake City, Utah",
+        dedicated: "1893, April, 24",
+        area:  382207,
+        imageUrl: "./images/salt-lake.jpg"
+    },
+    {
+        templeName: "Logan",
+        location:  "Logan, Utah",
+        dedicated: "1884, May, 19",
+        area:  119619,
+        imageUrl: "./images/logan-temple.jpg"
+    },
+    {
+        templeName: "Spokane",
+        location:  "Spokane, Washington",
+        dedicated: "1999, August, 21",
+        area:  10700,
+        imageUrl: "./images/washington-temple.jpg"
+    },
+    {
+        templeName: "Laie",
+        location:  "Laie, Hawaii",
+        dedicated: "1919, November, 27",
+        area:  42100,
+        imageUrl: "./images/laie-temple.jpg"
+    },
+
+
 ];
+const templesContainer = document.getElementById("templesContainer");
+
+    temples.forEach(temple => {
+        // Create card div
+        const card = document.createElement("div");
+        card.classList.add("temple-card");
+
+        // Create image element
+        const img = document.createElement("img");
+        img.classList.add("lazy-image");
+        img.src = "./images/placeholder.jpg"; // Placeholder image
+        img.setAttribute("data-src", temple.imageUrl); // Actual image URL
+        img.alt = `${temple.templeName} Temple`;
+
+        // Create h2 for temple name
+        const templeName = document.createElement("h2");
+        templeName.textContent = temple.templeName;
+
+        // Add image and text to card
+        card.appendChild(img);
+        card.appendChild(templeName);
+
+        // Add card to container
+        templesContainer.appendChild(card);
+    });
+
+    // Lazy loading logic using Intersection Observer
+    const lazyImages = document.querySelectorAll(".lazy-image");
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src; // Replace placeholder with real image
+                img.removeAttribute("data-src"); // Remove data-src attribute
+                observer.unobserve(img); // Stop observing once loaded
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
 
 // Function to render temple cards
 function renderTempleCards(templeList) {
