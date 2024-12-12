@@ -15,7 +15,7 @@
   
   /* Header Styling */
   header {
-    background-color: #cbb9a8; /* header color*/
+    background-color: #40607d; /* header color*/
     color: #fff;
     padding: 3rem 2rem;
     display: flex;
@@ -57,6 +57,7 @@
     align-items: center;
     overflow: hidden;
     height: 600px; /* Change header image sizing */
+    box-shadow: 8 #555;
 }
   
   .image img {
@@ -105,7 +106,7 @@
   .headshot {
     position: absolute; /* Allows the headshot to be positioned over the header image */
     bottom: 300px; /* Position the headshot relative to the bottom of the container */
-    left: 62%; /* Centers the headshot horizontally */
+    left: 65%; /* Centers the headshot horizontally */
     transform: translateX(-50%); /* Centers the headshot accurately */
     width: 500px; /* Set the width of the headshot */
     height: 500px; /* Set the height of the headshot */
