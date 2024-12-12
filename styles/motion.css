@@ -104,13 +104,24 @@
   /* Styling for the Headshot */
   .headshot {
     position: absolute; /* Allows the headshot to be positioned over the header image */
-    bottom: 20px; /* Position the headshot relative to the bottom of the container */
-    left: 50%; /* Centers the headshot horizontally */
+    bottom: 300px; /* Position the headshot relative to the bottom of the container */
+    left: 62%; /* Centers the headshot horizontally */
     transform: translateX(-50%); /* Centers the headshot accurately */
-    width: 150px; /* Set the width of the headshot */
-    height: 150px; /* Set the height of the headshot */
+    width: 500px; /* Set the width of the headshot */
+    height: 500px; /* Set the height of the headshot */
     object-fit: cover; /* Ensures the headshot maintains its aspect ratio */
-    border-radius: 50%; /* Makes the headshot circular */
-    border: 3px solid #fff; /* Adds a white border around the headshot for contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0; /* Makes the headshot circular */
+    border: 0px solid #fff; /* Adds a white border around the headshot for contrast */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .text {
+    position: absolute; /* Allows the headshot to be positioned over the header image */
+    bottom: 250px; /* Position the headshot relative to the bottom of the container */
+    left: 20%; /* Centers the headshot horizontally */
+    transform: translateX(-50%); /* Centers the headshot accurately */
+    width: 500px; /* Set the width of the headshot */
+    height: 500px; /* Set the height of the headshot */
+    object-fit: cover; /* Ensures the headshot maintains its aspect ratio */
+    font-size: 40px;
   }
