@@ -1,128 +1,158 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 2;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* Header Styling */
-  header {
-    background-color: #40607d; /* header color*/
-    color: #fff;
-    padding: 3rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    font-size:  2rem;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-  }
-  
-  header nav ul li a:hover {
-    background: #555;
-    border-radius: 5px;
-  }
-  
-  /* Full-Width Image Styling */
-  .image {
-    width: 100%; /* Ensures the div spans the full width */
-    overflow: hidden; /* Prevents unwanted scrollbars if the image is larger */
-    text-align: center;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 600px; /* Change header image sizing */
-    box-shadow: 8 #555;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  .image img {
-    width: 100%; /* Makes the image take the full width of the container */
-    height: 300px; /* Maintains the image's aspect ratio */
-    display: block;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    
-  }
-  
-  /* Main Content */
-  main {
-    flex: 1;
-    padding: 2rem;
-    background: #f4f4f4;
-  }
-  
-  /* Footer Styling */
-  footer {
-    background-color: #40607d;
-    color: #fff;
-    text-align: center;
-    padding: 3rem;
-    position: sticky;
-    bottom: 0;
-  }
-  
-  /* General Styling for the Image Container */
-.image {
-    position: relative; /* Creates a positioning context for the child elements */
-    width: 100%; /* Ensures the container spans the full width */
-    height: 300px; /* Set height for the header image */
-    overflow: hidden; /* Ensures content stays inside the container */
-  }
-  
-  /* Styling for the Header Graphic */
-  .header-graphic {
-    width: 100%; /* Makes the header graphic responsive */
-    height: 100%; /* Ensures it fills the container */
-    object-fit: cover; /* Ensures it maintains aspect ratio while filling the container */
-  }
-  
-  /* Styling for the Headshot */
-  .headshot {
-    position: absolute; /* Allows the headshot to be positioned over the header image */
-    bottom: 300px; /* Position the headshot relative to the bottom of the container */
-    left: 65%; /* Centers the headshot horizontally */
-    transform: translateX(-50%); /* Centers the headshot accurately */
-    width: 500px; /* Set the width of the headshot */
-    height: 500px; /* Set the height of the headshot */
-    object-fit: cover; /* Ensures the headshot maintains its aspect ratio */
-    border-radius: 0; /* Makes the headshot circular */
-    border: 0px solid #fff; /* Adds a white border around the headshot for contrast */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-  }
 
-  .text {
-    position: absolute; /* Allows the headshot to be positioned over the header image */
-    bottom: 250px; /* Position the headshot relative to the bottom of the container */
-    left: 20%; /* Centers the headshot horizontally */
-    transform: translateX(-50%); /* Centers the headshot accurately */
-    width: 500px; /* Set the width of the headshot */
-    height: 500px; /* Set the height of the headshot */
-    object-fit: cover; /* Ensures the headshot maintains its aspect ratio */
-    font-size: 40px;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+header {
+  background-color: #40607d;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Image Section */
+.image {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-graphic,
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+/* Portfolio Sections */
+.portfolio-section {
+  margin-bottom: 2rem;
+}
+
+.portfolio-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Portfolio Grid */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1.5rem; /* Space between cards */
+  padding: 2rem;
+}
+
+/* Project Card Styling */
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.project-card p {
+  margin: 0 1rem 1rem;
+  color: #666;
+}
+
+.project-card a {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #40607d;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project-card a:hover {
+  background-color: #304d63;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .portfolio {
+    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
   }
+}
