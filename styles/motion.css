@@ -22,16 +22,21 @@ header {
   background-color: #40607d;
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Vertically center items */
+  color: white;
+  font-size: 45px; /*logo size */
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 100-x;
   margin-bottom: 0.5rem;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 5rem;
 }
 
 header nav ul {
@@ -194,10 +199,11 @@ main h1 {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #40607d;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+  font-size: 20px;
 }
 
 /* Section Header Styling */
@@ -226,3 +232,109 @@ footer {
   object-fit: cover;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
+
+/*Contetc Form Info*/ 
+/* Contact Section */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #40607d;
+}
+
+/* Form Styling */
+/* Contact Section */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #40607d;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  background: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #40607d;
+}
+
+label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: #888;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: #40607d;
+  background: #f4f4f4;
+  padding: 0 0.2rem;
+}
+
+.submit-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #40607d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #304d63;
+}
+
