@@ -47,13 +47,15 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: background 0.3s;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover
+header nav ul li a.active {
   background: #555;
   border-radius: 5px;
 }
@@ -71,7 +73,7 @@ header nav ul li a:hover {
 .header-graphic,
 .image img {
   width: 100%;
-  height: auto;
+  height: 60vh;
   object-fit: cover;
 }
 
@@ -150,7 +152,7 @@ main h1 {
   justify-content: space-around;
   gap: 2rem;
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: #fffaee;
 }
 
 .floating-boxes .box {
@@ -162,6 +164,8 @@ main h1 {
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+
 }
 
 .floating-boxes .box h3 {
@@ -180,6 +184,16 @@ main h1 {
   display: block;
   font-size: 2rem;
   color: #40607d;
+}
+.floating-boxes .box h3 {
+  font-size: 1.8rem;
+  color: #40607d;
+  margin-bottom: 1rem;
+}
+
+.floating-boxes .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styling */
@@ -217,15 +231,47 @@ footer {
 .image-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   text-align: center;
+  position: relative;
+  color: white;
+
 }
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+/*header text*/
+.text h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  margin-left: -30%;
+  margin-top: -10%;
+  color: rgb(0, 0, 0);
+}
+
+.text h4 {
+  font-size: 30px; /* Adjust text size */
+  line-height: 1.5; /* Set line height for better readability */
+  color: rgb(0, 0, 0); /* Ensure text visibility */
+  max-width: 80%; /* Limit the width of the text */
+  margin: 0 auto; /* Center the text horizontally */
+  text-align: left; /* Align text in the center */
+  word-wrap: break-word; /* Ensure long words break properly */
+  margin-left: -30%;
+}
+
+
+
 
 /* Headshot Styling */
 .headshot {
   position: absolute;
-  bottom: 300px;
-  left: 65%;
+  bottom: 75px;
+  left: 73%;
   transform: translateX(-50%);
   width: 500px;
   height: 500px;
@@ -338,3 +384,7 @@ textarea:not(:placeholder-shown) + label {
   background-color: #304d63;
 }
 
+body {
+  color: #fffaee;
+  background-color: #fffaee /* page background color */
+}
