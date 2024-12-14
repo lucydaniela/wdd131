@@ -81,6 +81,7 @@ header nav ul li a.active {
 main {
   flex: 1;
   padding: 2rem;
+  background-color: white;
 }
 
 main h1 {
@@ -200,18 +201,36 @@ main h1 {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-  .portfolio {
-    grid-template-columns: 1fr;
-  }
-
-  .project-cards {
-    grid-template-columns: 1fr;
-  }
-
   .headshot {
-    display: none !important;
+    display: none !important; /* Hide headshot on mobile */
+    max-width: 100%;
+    height: auto;
+  }
+
+  .floating-boxes {
+    flex-direction: column; /* Stack boxes */
+    gap: 1rem; /* Add spacing between stacked boxes */
+    padding: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  header nav ul {
+    flex-direction: column; /* Stack navigation links */
+    gap: 0.5rem;
   }
 }
+
 
 /* Footer */
 footer {
@@ -228,6 +247,8 @@ footer {
   margin: 20px 0;
   font-size: 2.5rem;
 }
+
+
 
 /* Image Container */
 .image-container {
@@ -264,6 +285,7 @@ footer {
   text-align: left; /* Align text in the center */
   word-wrap: break-word; /* Ensure long words break properly */
   margin-left: -30%;
+ font-weight: 400;
 }
 
 
@@ -272,11 +294,11 @@ footer {
 /* Headshot Styling */
 .headshot {
   position: absolute;
-  bottom: 75px;
+  bottom: 30px;
   left: 73%;
   transform: translateX(-50%);
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   object-fit: cover;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
@@ -357,6 +379,7 @@ label {
   color: #888;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
+  font-size: 10rem;
 }
 
 input:focus + label,
@@ -389,4 +412,186 @@ textarea:not(:placeholder-shown) + label {
 body {
   color: white;
   background-color: white /* page background color */
+}
+
+/* Fonts */ 
+/* Import Raleway and merriweather fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+body {
+  font-family: 'Raleway'; 
+  line-height: 1.6; /* Optional: Improve readability */
+}
+
+/* Exclude buttons from Raleway */
+button, .submit-btn {
+  font-family: 'Merriweather', serif; /* Define a different font for buttons */
+  background-color: #40607d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Additional styling */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Use bold weight for headings */
+  color: black; 
+}
+
+p, a, li {
+  font-weight: 400; /* Use normal weight for body text */
+}
+
+button:hover, .submit-btn:hover {
+  background-color: #304d63;
+}
+
+.hidden {
+  display: none !important;
+}
+.hidden {
+  display: none !important; /* Completely hide the element */
+}
+@media (max-width: 768px) {
+  .headshot {
+    display: none !important;
+  }
+}
+
+/*contact page*/ 
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Raleway', Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #40607d;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f4f4f4;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Raleway', Arial, sans-serif; /* Apply Raleway to the whole contact box */
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #40607d;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Raleway', Arial, sans-serif; /* Use Raleway for input text */
+  transition: border-color 0.3s ease;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #40607d;
+}
+
+label {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  font-size: 0.875rem;
+  color: #888;
+  font-family: 'Raleway', Arial, sans-serif; /* Use Raleway for labels */
+  pointer-events: none;
+  transition: all 0.3s ease; 
+  
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  color: #40607d;
+  background: white;
+  padding: 0 0.2rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #40607d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  font-family: 'Merriweather', serif; /* Override to Merriweather for the button */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #304d63;
 }
